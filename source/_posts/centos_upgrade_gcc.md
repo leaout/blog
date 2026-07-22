@@ -7,11 +7,13 @@ tags:
 
 ## 方法1
 
+```
 scl enable devtoolset-7 bash
 
 vim /etc/profile
 
 source /opt/rh/devtoolset-7/enable
+```
 
 ## 方法2 
 
@@ -19,25 +21,28 @@ source /opt/rh/devtoolset-7/enable
 
 GCC源码地址为http://ftp.gnu.org/gnu/gcc
 
-wget http://ftp.gnu.org/gnu/gcc/gcc-8.3.0/gcc-8.3.0.tar.gz tar -zxvf gcc-8.3.0.tar.gz
+```
+wget http://ftp.gnu.org/gnu/gcc/gcc-8.3.0/gcc-8.3.0.tar.gz
+tar -zxvf gcc-8.3.0.tar.gz
 
 cd gcc-8.3.0
+```
 
 利用源码包里自带的工具下载所需要的依赖项，确保系统可以联网
 
+```
 ./contrib/download_prerequisites
+```
 
 ## 安装
 
-mkdir build #创建编译输出目录
-
+```
+mkdir build
 cd build
-
-../configure --enable-checking=release --enable-languages=c,c++ --disable-multilib #生成Makefile
-
-make #编译
-
-make install 安装
+../configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
+make
+make install
+```
 
 引用
 

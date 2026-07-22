@@ -11,13 +11,19 @@ tags: 数据库
  服务器 192.168.1.112
 
 ## 1.下载安装 
+```
 https://dl.influxdata.com/influxdb/releases/influxdb2-2.7.10-1.x86_64.rpm
 rpm -ivh influxdb2-2.7.10-1.x86_64.rpm
+```
 下载client
+```
 wget https://download.influxdata.com/influxdb/releases/influxdb2-client-2.7.5-linux-amd64.tar.gz
 tar xvfz influxdb2-client-2.7.5-linux-amd64.tar.gz
+```
 启动服务
+```
 systemctl start influxdb
+```
 
 ## 2.生成测试数据
 安装go
